@@ -6,7 +6,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   </head>
 
   <body>
@@ -21,7 +23,7 @@
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
             <i class="fa fa-group"></i>
-            APMsite
+            DevMatch
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
